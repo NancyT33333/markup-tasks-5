@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i,
+b, u, i, button,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -67,8 +67,58 @@ figure[class='logo'] {
 
 .slides > .carousel-control-prev {
     grid-column: 1 / 2;
+    position: relative;
     
 }
+
+.slides > .carousel-control-next {
+    grid-column: 3 / 4;
+    position: relative;  
+}
+
+
+ .carousel-control-prev-icon, .carousel-control-next-icon {
+	
+	display: block;
+	position: absolute;
+	width: 61px;
+	height: 61px;
+	border-radius: 50%;
+	top: calc(50% - 30.5px);
+	background-color: #ffdb4a;
+	box-shadow: 1px 1px 1px rgba(255, 90, 0, 0.8);
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+	opacity: .8;
+}
+
+
+.carousel-control-prev-icon {
+	right: 35px;
+	} 
+ .carousel-control-next-icon {
+	left: 41px ;
+}
+
+
+.carousel-control-prev-icon::after {
+ content: url('pictures/665.png');
+ position: absolute;
+ top: 19px;
+ left: 20px;
+}
+
+
+.carousel-control-next-icon::after {
+position: absolute;
+content: url('pictures/662.png');
+top: 17px;
+left: 23px;
+}
+
+
+
 
 .slides > .carousel-inner {
     grid-column: 2 / 3;
@@ -83,10 +133,6 @@ figure[class='logo'] {
     left: -20px;
 }
 
-.slides > .carousel-control-next {
-    grid-column: 3 / 4;
-  
-}
 
 .carousel-inner > img {
     display: block;
@@ -99,7 +145,7 @@ figure[class='logo'] {
     width: 640px;
     height: 360px;
     position: relative;
-    margin: 56px auto;
+    margin: 56px auto 72px;
 }
 
 .video-box > .shape {
@@ -115,25 +161,57 @@ figure[class='logo'] {
 	text-align: center;
 }
 
+.video-box > .play-btn {
+	position: absolute;
+	display: block;
+	width: 128px;
+	height: 128px;
+	background-color: #ffdb4a;
+	border-radius: 50%;
+	box-shadow: 1px 1px 1px rgba(255, 90, 0, 0.8);
+	top: calc(50% - 64px);
+	left: calc(50% - 64px);
+}
+
+
+.video-box > .play-btn:after {
+	content: url(pictures/695.png);
+	position: absolute;
+	top: 36px;
+	left: 48px;
+
+}
+
+.video-box > .play-btn:hover {
+	opacity: .8;
+}
+
 h3 {
     display: block;
     text-align: center;
-    font-size: 47px;
-    margin-bottom: 40px; 
+    
+    margin-bottom: 36px;
+}
+h3.font-47 {
+	font-size: 47px;
+	line-height: 45px;
 }
 
 h3.font-42 {
 	font-size: 42px;
+	line-height: 40px;
+	margin-top: -2px; 
+
 }
 
 .promo-grid__row {
     display: grid;
     width: 911px;
     height: 238px;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px; 
+    grid-template-columns: 220px 220px 220px 220px;
     grid-template-rows: 1fr 60px auto;
-    margin: 0 auto 76px;
+    margin: 0 33px 76px 42px;
     
     justify-items: left;
 }
@@ -214,10 +292,37 @@ h3.font-42 {
 
 h5.promo-grid__header {
 	font-size: 30px;
+	overflow: hidden;
 
 	
 }
 
 span.promo-grid__descr {
 	font-size: 16px;
+}
+
+.btn {
+	margin: 64px auto 0;
+}
+
+
+.btn button {
+	display: block;
+	height: 70px;
+	width: 317px;
+	background-image: linear-gradient(to top, #ffdb00 0%, #ffe34a 100%);
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.72);
+	font-size: 36px;
+	border-radius: 6px;
+    
+    
+	background-color: rgba(255, 255, 255, 0.18);
+
+}
+
+.btn button:hover {
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.36);
+	background-image: linear-gradient(to top, #ffe12f 0%, #ffe86a 100%);
+	cursor: pointer;
 }
