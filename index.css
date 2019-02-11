@@ -161,12 +161,12 @@ figure[class='logo'] {
     opacity: .8;
 }
 
-h3 {
+h1, h3 {
     display: block;
     text-align: center;
 }
 
-h3.font-47 {
+h1.font-47 {
     font-size: 47px;
     line-height: 45px;
     margin-bottom: 44px;
